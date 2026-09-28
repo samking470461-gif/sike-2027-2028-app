@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main style={{
       minHeight: '100vh',
-      backgroundColor: '#07090E', // اللون الأساسي المعتمد في الهوية
+      backgroundColor: '#07090E',
       color: '#F8FAFC',
       fontFamily: 'system-ui, -apple-system, sans-serif',
       direction: 'rtl',
@@ -31,9 +31,9 @@ export default function Home() {
         </div>
 
         <nav style={{ display: 'flex', gap: '20px', fontSize: '0.95rem' }}>
-          <Link href="/services" style={{ color: '#94A3B8', textDecoration: 'none' }}>الخدمات</Link>
+          <Link href="/create-order" style={{ color: '#94A3B8', textDecoration: 'none' }}>تقديم طلب</Link>
           <Link href="/track" style={{ color: '#94A3B8', textDecoration: 'none' }}>تتبع الطلب</Link>
-          <Link href="/prices" style={{ color: '#94A3B8', textDecoration: 'none' }}>الأسعار</Link>
+          <Link href="/dashboard" style={{ color: '#94A3B8', textDecoration: 'none' }}>لوحة التحكم</Link>
         </nav>
 
         <div style={{ display: 'flex', gap: '10px' }}>
@@ -96,7 +96,7 @@ export default function Home() {
 
         {/* أزرار العمليات الرئيسية */}
         <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Link href="/register" style={{
+          <Link href="/create-order" style={{
             padding: '14px 32px',
             borderRadius: '10px',
             backgroundColor: '#F8FAFC',
@@ -122,7 +122,7 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* العدادات الحقيقية المبسطة */}
+        {/* العدادات */}
         <div style={{
           display: 'flex',
           gap: '40px',
