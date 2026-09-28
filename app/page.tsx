@@ -15,6 +15,7 @@ export default function Home() {
       <div style={{ 
         textAlign: 'center', 
         maxWidth: '650px',
+        width: '100%',
         padding: '3rem 2rem', 
         border: '1px solid rgba(255, 255, 255, 0.1)', 
         borderRadius: '20px', 
@@ -29,23 +30,24 @@ export default function Home() {
         }}>
           منصة SIKE 2027–2028
         </h1>
+        
         <p style={{ 
           fontSize: '1.2rem', 
           color: '#94a3b8',
           lineHeight: '1.7',
           marginBottom: '2.5rem'
         }}>
-          أهلاً بكم في المنصة الرسمية. نحن هنا لتقديم أفضل الخدمات والحلول المتكاملة لكم.
+          أهلاً بكم في المنصة الرسمية. يرجى تسجيل الدخول للوصول إلى كافة الخدمات والخصائص.
         </p>
         
         <div style={{
           display: 'flex',
-          gap: '12px',
+          gap: '15px',
           justifyContent: 'center',
           flexWrap: 'wrap'
         }}>
           <button style={{
-            padding: '12px 24px',
+            padding: '12px 30px',
             backgroundColor: '#0284c7',
             color: '#ffffff',
             border: 'none',
@@ -54,11 +56,11 @@ export default function Home() {
             fontSize: '1rem',
             cursor: 'pointer'
           }}>
-            تصفح الخدمات
+            تسجيل الدخول
           </button>
           
           <button style={{
-            padding: '12px 24px',
+            padding: '12px 30px',
             backgroundColor: 'transparent',
             color: '#38bdf8',
             border: '1px solid #0284c7',
@@ -67,7 +69,7 @@ export default function Home() {
             fontSize: '1rem',
             cursor: 'pointer'
           }}>
-            تواصل معنا
+            إنشاء حساب جديد
           </button>
         </div>
       </div>
