@@ -1,159 +1,112 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function DashboardPage() {
   return (
     <main style={{
-      minHeight: '100vh',
-      backgroundColor: '#07090E',
-      color: '#F8FAFC',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
-      direction: 'rtl',
-      display: 'flex',
-      flexDirection: 'column'
+      minHeight: "100vh",
+      backgroundColor: "#07090E",
+      color: "#F8FAFC",
+      fontFamily: "system-ui, -apple-system, sans-serif",
+      direction: "rtl"
     }}>
-      {/* Header / الهيدر الرسمي */}
+      {/* الشريط العلوي */}
       <header style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1.2rem 2rem',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-        backgroundColor: 'rgba(7, 9, 14, 0.8)',
-        backdropFilter: 'blur(10px)'
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "1.2rem 2rem",
+        backgroundColor: "rgba(255, 255, 255, 0.02)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.08)"
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '1.6rem', fontWeight: '900', letterSpacing: '1px', color: '#F8FAFC' }}>
-            SIKE
-          </span>
-          <span style={{ fontSize: '0.8rem', color: '#64748B', fontWeight: 'bold' }}>
-            2027–2028
-          </span>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <span style={{ fontSize: "1.5rem", fontWeight: "900", color: "#F8FAFC" }}>SIKE</span>
+          <span style={{ fontSize: "0.8rem", color: "#64748B", fontWeight: "bold" }}>لوحة التحكم | 2027–2028</span>
         </div>
 
-        <nav style={{ display: 'flex', gap: '20px', fontSize: '0.95rem' }}>
-          <Link href="/create-order" style={{ color: '#94A3B8', textDecoration: 'none' }}>تقديم طلب</Link>
-          <Link href="/track" style={{ color: '#94A3B8', textDecoration: 'none' }}>تتبع الطلب</Link>
-          <Link href="/dashboard" style={{ color: '#94A3B8', textDecoration: 'none' }}>لوحة التحكم</Link>
-        </nav>
-
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <Link href="/login" style={{
-            padding: '8px 18px',
-            borderRadius: '8px',
-            border: '1px solid #334155',
-            color: '#F8FAFC',
-            textDecoration: 'none',
-            fontSize: '0.9rem'
-          }}>
-            دخول
-          </Link>
-        </div>
+        <Link href="/" style={{
+          padding: "8px 18px",
+          backgroundColor: "#ef4444",
+          color: "#fff",
+          borderRadius: "8px",
+          textDecoration: "none",
+          fontSize: "0.85rem",
+          fontWeight: "bold"
+        }}>
+          تسجيل الخروج
+        </Link>
       </header>
 
-      {/* Hero Section / الواجهة الرئيسية */}
-      <section style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        padding: '4rem 1.5rem'
-      }}>
-        <div style={{
-          padding: '6px 16px',
-          borderRadius: '20px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          backgroundColor: 'rgba(255, 255, 255, 0.03)',
-          color: '#64748B',
-          fontSize: '0.85rem',
-          marginBottom: '1.5rem',
-          fontWeight: 'bold'
-        }}>
-          SIKE 2027–2028
+      {/* المحتوى الرئيسي */}
+      <div style={{ padding: "2.5rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
+          <h2 style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#F8FAFC", margin: 0 }}>
+            مرحباً بك، المالك (Owner) 👋
+          </h2>
+          <span style={{ padding: "6px 14px", borderRadius: "20px", backgroundColor: "rgba(34, 197, 94, 0.1)", color: "#22c55e", fontSize: "0.85rem", fontWeight: "bold" }}>
+            ● النظام متصل حي (Realtime)
+          </span>
         </div>
 
-        <h1 style={{
-          fontSize: '2.8rem',
-          fontWeight: '800',
-          lineHeight: '1.3',
-          maxWidth: '800px',
-          color: '#F8FAFC',
-          marginBottom: '1.5rem'
-        }}>
-          منصة مساعدة للطلاب بشكل آمن ورسمي 100%
-        </h1>
-
-        <p style={{
-          fontSize: '1.15rem',
-          color: '#64748B',
-          maxWidth: '600px',
-          lineHeight: '1.7',
-          marginBottom: '2.5rem'
-        }}>
-          خدمات مخصصة لطلاب البكالوريا والتاسع لتسهيل تقديم الطلبات ومتابعتها عبر نظام رقمي مشفر ومباشر.
-        </p>
-
-        {/* أزرار العمليات الرئيسية */}
-        <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Link href="/create-order" style={{
-            padding: '14px 32px',
-            borderRadius: '10px',
-            backgroundColor: '#F8FAFC',
-            color: '#07090E',
-            fontWeight: 'bold',
-            textDecoration: 'none',
-            fontSize: '1rem'
-          }}>
-            ابدأ طلبك الآن
-          </Link>
-
-          <Link href="/track" style={{
-            padding: '14px 32px',
-            borderRadius: '10px',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
-            color: '#F8FAFC',
-            fontWeight: 'bold',
-            textDecoration: 'none',
-            fontSize: '1rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.02)'
-          }}>
-            تتبع طلبك
-          </Link>
-        </div>
-
-        {/* العدادات */}
+        {/* إحصائيات العدادات */}
         <div style={{
-          display: 'flex',
-          gap: '40px',
-          marginTop: '4rem',
-          paddingTop: '2rem',
-          borderTop: '1px solid rgba(255, 255, 255, 0.05)'
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "1.5rem",
+          marginBottom: "3rem"
         }}>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#F8FAFC' }}>+1,250</div>
-            <div style={{ fontSize: '0.85rem', color: '#64748B' }}>طالب مشترك</div>
+          <div style={{ padding: "1.5rem", backgroundColor: "rgba(255, 255, 255, 0.02)", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
+            <h3 style={{ color: "#64748B", fontSize: "0.85rem", marginBottom: "0.5rem" }}>إجمالي الطلاب المشتركين</h3>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#F8FAFC", margin: 0 }}>1,250</p>
           </div>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#22c55e', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e' }}></span>
-              37
-            </div>
-            <div style={{ fontSize: '0.85rem', color: '#64748B' }}>متصل الآن</div>
+
+          <div style={{ padding: "1.5rem", backgroundColor: "rgba(255, 255, 255, 0.02)", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
+            <h3 style={{ color: "#64748B", fontSize: "0.85rem", marginBottom: "0.5rem" }}>الطلاب المتصلون الآن</h3>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#22c55e", margin: 0 }}>37</p>
+          </div>
+
+          <div style={{ padding: "1.5rem", backgroundColor: "rgba(255, 255, 255, 0.02)", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
+            <h3 style={{ color: "#64748B", fontSize: "0.85rem", marginBottom: "0.5rem" }}>الطلبات الجديدة</h3>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#eab308", margin: 0 }}>12</p>
+          </div>
+
+          <div style={{ padding: "1.5rem", backgroundColor: "rgba(255, 255, 255, 0.02)", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
+            <h3 style={{ color: "#64748B", fontSize: "0.85rem", marginBottom: "0.5rem" }}>الطلبات المكتملة</h3>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#38bdf8", margin: 0 }}>480</p>
           </div>
         </div>
-      </section>
 
-      {/* Footer / الفوتر */}
-      <footer style={{
-        padding: '1.5rem 2rem',
-        textAlign: 'center',
-        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-        color: '#64748B',
-        fontSize: '0.85rem'
-      }}>
-        © SIKE 2027–2028 | جميع الحقوق محفوظة
-      </footer>
+        {/* جدول الطلبات الأخيرة */}
+        <div style={{ backgroundColor: "rgba(255, 255, 255, 0.02)", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "1.5rem" }}>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "1.2rem", color: "#F8FAFC" }}>
+            آخر الطلبات الواردة
+          </h3>
+
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "right", fontSize: "0.9rem" }}>
+              <thead>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.08)", color: "#64748B" }}>
+                  <th style={{ padding: "12px" }}>رقم الطلب</th>
+                  <th style={{ padding: "12px" }}>الشهادة / الفرع</th>
+                  <th style={{ padding: "12px" }}>اسم الطالب</th>
+                  <th style={{ padding: "12px" }}>الحالة</th>
+                  <th style={{ padding: "12px" }}>الإجراء</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.04)" }}>
+                  <td style={{ padding: "12px", fontWeight: "bold", color: "#38bdf8", direction: "ltr", textAlign: "right" }}>SIKE-2027-000001</td>
+                  <td style={{ padding: "12px" }}>بكالوريا - علمي (إدلب)</td>
+                  <td style={{ padding: "12px" }}>أحمد المحمد</td>
+                  <td style={{ padding: "12px", color: "#eab308", fontWeight: "bold" }}>جديد</td>
+                  <td style={{ padding: "12px" }}>
+                    <button style={{ padding: "6px 12px", backgroundColor: "#0284c7", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.8rem" }}>معالجة</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
