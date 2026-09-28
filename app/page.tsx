@@ -27,7 +27,7 @@ export default function Home() {
           fontWeight: 'bold',
           marginBottom: '1.2rem' 
         }}>
-          أهلاً بكم في منصة SIKE 2027–2028
+          منصة SIKE 2027–2028
         </h1>
         <p style={{ 
           fontSize: '1.2rem', 
@@ -35,7 +35,7 @@ export default function Home() {
           lineHeight: '1.7',
           marginBottom: '2.5rem'
         }}>
-          الموقع الرسمي للمنصة يعمل الآن بنجاح ومربوط بالكامل. نسعد بوجودكم معنا ونعمل على تقديم أفضل الخدمات لكم.
+          أهلاً بكم في المنصة الرسمية. نحن هنا لتقديم أفضل الخدمات والحلول المتكاملة لكم.
         </p>
         
         <div style={{
