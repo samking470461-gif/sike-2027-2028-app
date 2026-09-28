@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main style={{ 
@@ -46,20 +48,20 @@ export default function Home() {
           justifyContent: 'center',
           flexWrap: 'wrap'
         }}>
-          <button style={{
+          <Link href="/login" style={{
             padding: '12px 30px',
             backgroundColor: '#0284c7',
             color: '#ffffff',
-            border: 'none',
             borderRadius: '8px',
             fontWeight: 'bold',
             fontSize: '1rem',
-            cursor: 'pointer'
+            textDecoration: 'none',
+            display: 'inline-block'
           }}>
             تسجيل الدخول
-          </button>
+          </Link>
           
-          <button style={{
+          <Link href="/register" style={{
             padding: '12px 30px',
             backgroundColor: 'transparent',
             color: '#38bdf8',
@@ -67,10 +69,11 @@ export default function Home() {
             borderRadius: '8px',
             fontWeight: 'bold',
             fontSize: '1rem',
-            cursor: 'pointer'
+            textDecoration: 'none',
+            display: 'inline-block'
           }}>
             إنشاء حساب جديد
-          </button>
+          </Link>
         </div>
       </div>
     </main>
